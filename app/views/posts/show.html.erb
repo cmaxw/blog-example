@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<h2><%= @post.title %></h2>
+<p><%= @post.body.html_safe %></p>
+
+<% if current_user %>
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<% end %>
+<%= link_to 'Home', root_path %>
